@@ -39,7 +39,7 @@ export default class Sortable {
 
     const target = document.elementFromPoint(e.clientX, e.clientY);
     let listItem = this.items.find((item) => item === target);
-    let column = target.closest('.board-column').querySelector('.column-list');
+    const column = target.closest('.board-column').querySelector('.column-list');
 
     if (!listItem) {
       column.appendChild(this.currentItem);
@@ -49,7 +49,7 @@ export default class Sortable {
       const toTop = e.clientY - top;
       if (toTop > toBottom) {
         listItem = listItem.nextElementSibling;
-          if (listItem === this.currentItem) listItem = listItem.nextElementSibling;
+        if (listItem === this.currentItem) listItem = listItem.nextElementSibling;
       }
       column.insertBefore(this.currentItem, listItem);
     }
@@ -62,6 +62,5 @@ export default class Sortable {
   onDrag(e) {
     this.currentItem.style.left = `${e.clientX - this.shiftX}px`;
     this.currentItem.style.top = `${e.clientY - this.shiftY}px`;
-
   }
 }
