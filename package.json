@@ -8,8 +8,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
-    "test": "jest --coverage",
-    "e2e": "jest --runInBand",
+    "test": "jest --passWithNoTests",
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
