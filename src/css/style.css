@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.board {
+    width: 846px;
+    background-color: #187ABB;
+    padding: 5px 10px 5px 10px;
+    display: flex;
+}
+
+.board-column {
+    background-color: #DEE2E5;
+    padding: 15px 10px 10px 10px;
+    margin-right: 10px;
+    width: 33%;
+    border-radius: 5px;
+}
+
+.board-column:last-child {
+    margin-right: 0;
+}
+
+.column-title {
+    margin: 0 0 10px 0px;
+    font-size: inherit;
+    text-transform: uppercase;
+    color: #234152;
+}
+
+.column-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.column-list-item {
+    position: relative;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    cursor: pointer;
+    background-color: white;
+    color: #788B94;
+}
+
+.delete-item {
+    display: none;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 15px;
+    height: 15px;
+    padding: 3px;
+    border-radius: 2px; 
+    background-color: #EAEDEF;
+  }
+  
+  .delete-item::after {
+    content: '\00D7';
+    color: inherit;   
+  }
+
+  .column-list-item:hover {
+    background-color: #F5F6F7;
+  }
+  
+  .column-list-item:hover .delete-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.sortable__dragged {
+    border-radius: 5px;
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+    background: #fff;
+}
+
+.column-add-btn {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: #788B94;
+    background-color: transparent;
+}
+
+.add-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add-form-text {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.add-form-btn-submit {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    background-color: #5CA84E;
+    font-weight: 700;
+}
+
+.add-form-btn-cancel {
+    border: none;
+    background-color: #DEE2E5;
+    color: #788B94;
+    font-size: 30px;
+}

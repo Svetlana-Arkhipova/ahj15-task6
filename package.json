@@ -1,0 +1,38 @@
+{
+  "name": "ahj15-task6",
+  "version": "1.0.0",
+  "description": "Task DnD",
+  "main": "index.js",
+  "repository": "https://github.com/Svetlana-Arkhipova/ahj15-task6.git",
+  "author": "Svetlana Arkhipova <sve.tochka@inbox.ru>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest --coverage",
+    "e2e": "jest --runInBand",
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-jest": "^27.0.6",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "eslint": "^5.16.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.0.6",
+    "mini-css-extract-plugin": "^2.2.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "core-js": "3",
+    "eslint-config-airbnb-base": "^14.2.1"
+  }
+}
